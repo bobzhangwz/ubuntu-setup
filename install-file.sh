@@ -1,7 +1,6 @@
 #!/bin/bash
 setq -e
-apt-get install git-core npm python-pip xmlstarlet slime scalacd . -y
-npm install jshint swank-js csslint coffee-script -g
+apt-get install git-core python-pip xmlstarlet slime scala mc -y
 
 wget https://github.com/pinard/Pymacs/tarball/v0.25
 tar -xvf v0.25 && rm v0.25 -fr
@@ -20,8 +19,9 @@ cd .. && rm rope* -fr
 
 pip install ropemacs
 
-add-apt-repository ppa:cassou/emacs
-apt-get install emacs24 emacs24-el emacs24-common-non-dfsg
+
+# add-apt-repository ppa:cassou/emacs
+# apt-get install emacs24 emacs24-el emacs24-common-non-dfsg
 
 git clone https://github.com/bobzhangwz/emacs-config.git ~/.emacs.d
 
@@ -31,3 +31,6 @@ wget https://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb
 dpkg -i -y google-*.deb
 apt-get install -f
 rm *google*.deb*
+
+echo "you must install emacs by run:"
+echo 'add-apt-repository ppa:cassou/emacs \n apt-get install emacs24 emacs24-el emacs24-common-non-dfsg'
