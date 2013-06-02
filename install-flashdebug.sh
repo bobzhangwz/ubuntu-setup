@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-apt-get install flashplugin-installer nspluginwrapper ia32-libs -y
+apt-get install flashplugin-installer nspluginwrapper ia32-libs ttf-arphic-uming -y
 wget http://fpdownload.macromedia.com/pub/flashplayer/updaters/11/flashplayer_11_plugin_debug.i386.tar.gz
 tar -xvf flashplayer_11_plugin_debug.i386.tar.gz
 cp /usr/lib/flashplugin-installer/libflashplayer.so /usr/lib/flashplugin-installer/libflashplayer.so.bk
@@ -9,7 +9,6 @@ cp /usr/lib/flashplugin-installer/libflashplayer.so /usr/lib/flashplugin-install
 mv libflashplayer.so /usr/lib/flashplugin-installer/libflashplayer.so
 
 rm usr/ flashplayer_11_plugin_debug.i386.tar.gz -fr
-
 
 nspluginwrapper -i /usr/lib/flashplugin-installer/libflashplayer.so
 

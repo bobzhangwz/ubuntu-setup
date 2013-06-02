@@ -1,14 +1,9 @@
 #!/bin/bash
 set -e
 
-# Install chrome and virtualBox && 
+# Install chrome and virtualBox &&
 
-# wget https://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb
-# dpkg -i google-*.deb
-# apt-get install -f
-# rm *google*.deb*
-
-wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -0-  | sudo apt-key add -
+wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O-  | sudo apt-key add -
 
 cat >> /etc/apt/sources.list <<EOF
 deb http://dl.google.com/linux/chrome/deb/ stable main
@@ -26,6 +21,16 @@ deb http://download.virtualbox.org/virtualbox/debian lenny contrib non-free
 EOF
 
 wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+add-apt-repository ppa:fcitx-team/nightly
+
 apt-get update
 apt-get install synapse sysv-rc-conf -y
 apt-get install virtualbox-4.2 dkms  google-chrome-stable -y
+
+
+# sougou
+apt-get install fcitx-sogoupinyin im-switch
+im-switch -s fcitx -z default
+im-switch -c
+
+echo "install skin here http://pan.baidu.com/share/link?shareid=591843&uk=4060302862"
