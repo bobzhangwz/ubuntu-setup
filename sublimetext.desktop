@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=sublimetext
+GenericName=Sublime Text 2
+Comment=Edit text files
+Exec= /home/software/sublime_text/sublime_text
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;
+Icon=/home/software/sublime_text/Icon/256x256/sublime_text.png
+Categories=TextEditor;
+X-GNOME-FullName=Sublime Text 2
