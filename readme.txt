@@ -1,6 +1,6 @@
 Adobe Systems Incorporated
 Flash Player 11 for Linux
-Version 11.2.202.291
+Version 11.2.202.297
 2012
 
 Adobe recommends that all users upgrade to the latest version of Adobe Flash 
