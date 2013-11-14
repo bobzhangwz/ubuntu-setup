@@ -8,7 +8,7 @@ URxvt.preeditType:OffTheSpot
 !!颜色设置
 URxvt.depth:32
 !!中括号内数表示透明度
-URxvt.background:[80]#000000
+URxvt.background:#222222
 URxvt.foreground:#ffffff
 URxvt.colorBD:Gray95
 URxvt.colorUL:Green
@@ -26,6 +26,10 @@ URxvt.perl-ext-common: default,tabbed,matcher,clipboard
 !URxvt.tabbed.tab-bg: 0
 !URxvt.tabbed.tabbar-fg: 4
 Rxvt.menu:/etc/X11/rxvt.menu
+!!复制黏贴
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.Control-V: perl:clipboard:paste
+URxvt.iso14755: False
 !!URL操作
 URxvt.urlLauncher:firefox
 URxvt.matcher.button:1
@@ -49,3 +53,4 @@ URxvt.borderLess:False
 Xft.dpi:96
 URxvt.font:xft:monofur:size=11:style=Regular:antialias=true,xft:monofur:size=10:style=Regular:antialias=true
 URxvt.boldfont:xft:monofur:size=11:style=BOld:antialias=true,xft:monofur:size=10:style=Bold:antialias=true
+URxvt.termName: rxvt-256color

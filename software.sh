@@ -3,12 +3,13 @@ set -e
 
 # Install chrome and virtualBox &&
 
-wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O-  | sudo apt-key add - 
+wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O-  | sudo apt-key add -
 
-cat >> /etc/apt/sources.list <<EOF
-deb http://dl.google.com/linux/chrome/deb/ stable main
-EOF
+# cat >> /etc/apt/sources.list <<EOF
+# deb http://dl.google.com/linux/chrome/deb/ stable main
+# EOF
 
+# ryan 67603-AGMX1-V1ID2-3L1AB-S6HYM-8O5M7
 # deb http://download.virtualbox.org/virtualbox/debian precise contrib
 # deb http://download.virtualbox.org/virtualbox/debian oneiric contrib
 # deb http://download.virtualbox.org/virtualbox/debian natty contrib

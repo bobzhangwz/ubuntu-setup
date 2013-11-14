@@ -5,7 +5,7 @@ rm -rf /var/lib/lxc /var/cache/lxc
 ln -s /home/lib/lxc/lxclib /var/lib/lxc
 ln -s /home/lib/lxc/lxccache /var/cache/lxc
 
-echo << EOF
+cat << EOF >> /etc/network/interfaces
 auto br0
 iface br0 inet dhcp
   # ethX is the interface with which the bridge should be bridged
@@ -18,4 +18,4 @@ iface br0 inet dhcp
   bridge_stp off
   bridge_maxwait 5
   post-up /usr/sbin/brctl setfd br0 0
-EOF << /etc/network/interfaces
+EOF 
